@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khuyến mãi bùng nổ | Let's drink</title>
+    <!-- Logo -->
+    <link rel="icon" type="image/png" href="./Image/logo.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- Tích hợp Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body style="padding-top:70px; background-color: #E0F7FA;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: linear-gradient(90deg,#00c6ff,#00ff99);"> <!-- Tạo navbar có chữ sáng nền tối, dính khi cuộn -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./Image/logo.png">Let's drink</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="own.html">Giới thiệu</a></li>                   
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="combo.html">Khuyến mãi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Đặt nước</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Góp ý</a></li>
+                    <li class="nav-item" id="logout"><a class="nav-link">Đăng xuất</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back page-->
+     <div class="container">
+        <div class="row">
+            <div class="p-2" style="height: 40px; background-color:#fff3cd;"> 
+                <div> 
+                    <a class="back" href="combo.html"> Khuyến mãi</a> > 
+                    <a class="back" href="khuyenmaiB.html">Khuyến mãi bùng nổ </a> 
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- Nội dung -->
+    <div class="container mt-4 mb-5">
+        <div class="row align-items-center">
+            <!-- Ảnh -->
+            <div class="col-md-6 text-center">
+                <img src="./Image/no.png" class="img-fluid rounded" alt="Khuyến mãi bùng nổ">
+            </div>
+            <!-- Thông tin -->
+            <div class="col-md-6">
+                <h2>Khuyến mãi bùng nổ</h2>
+                <h4 class="text-danger">Giảm 20% cho combo</h4>
+                <p class="mt-3">
+                    Chương trình khuyến mãi bùng nổ giúp người dùng tiết kiệm chi phí khi mua nước tại Let's drink. 
+                    Số lượng áp dụng có hạn.
+                </p>
+                <h5>Điều kiện áp dụng:</h5>
+                <ul>
+                    <li>Áp dụng trong khung giờ khuyến mãi</li>
+                    <li>Số lượng ưu đãi có hạn</li>
+                </ul>
+                <a href="booking.html" class="btn btn-primary me-2">Đặt nước</a>
+                <a href="menu.html" class="btn btn-warning me-2">Xem menu</a>
+                <!-- Làm modal -->
+                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#myModal"> Áp dụng </button>
+                <!-- Tạo phần hiển thị cho nút bấm -->
+                <div class="modal fade" id="myModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Phần đầu -->
+                            <div class="modal-header">
+                                <h3 class="modal-title">Áp dụng</h3>
+                                <!-- Tạo nút "X" -->
+                                <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Phần body -->
+                            <div class="modal-body"> 
+                                Bạn đã được áp dụng khuyến mãi này vào hóa đơn
+                            </div>
+                            <!-- Nút "Đóng" -->
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...args)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="v2Z13ueAslLe-hNsM6IUq";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+        <script src="./js/home.js"></script>
+
+    <!-- Footer -->
+    <footer class="text-light text-center py-3" style="background-color: #003366;">
+        <p class="mb-1">© 2026 Let's drink. All rights reserved.</p>
+    </footer>
+</body>
+</html>

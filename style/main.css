@@ -1,0 +1,67 @@
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.title-menu {
+    color: #e63946; /* đỏ đồ ăn */
+}
+
+.title-combo {
+    color: #f4a261; /* cam khuyến mãi */
+}
+
+.title-res {
+    color: #2a9d8f; /* xanh giới thiệu */
+}
+
+.title-own {
+    color: #6f42c1; /* tím cá nhân */
+}
+
+.title-booking {
+    color: #0d6efd; /* xanh hành động */
+}
+
+.title-contact {
+    color: #198754; /* xanh lá */
+}
+
+.title-feedback {
+    color: #ffc107; /* vàng đánh giá */
+}
+
+.back {
+    text-decoration: none;
+    color: inherit;
+}
+
+.back:hover {
+    color: #ffc107;
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #e63946 !important;
+    box-shadow: 0 0 8px rgba(230, 57, 70, 0.5) !important;
+    outline: none;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+
+/* 👉 CHỈ PHỒNG CARD KHI KHÔNG CÓ MODAL */
+body:not(.modal-open) .card:hover {
+    transform: scale(1.02);
+}
+
+/* 👉 TẮT HIỆU ỨNG KHI MODAL MỞ (CHỐNG GIẬT) */
+.modal-open .card:hover,
+.modal-open .form-control:focus {
+    transform: none;
+}

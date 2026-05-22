@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ | Let's drink</title>
+    <!-- Logo web -->
+    <link rel="icon" type="image/png" href="./Image/logo.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- Tích hợp Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body style="padding-top:70px; background-color: #E0F7FA;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: linear-gradient(90deg,#00c6ff,#00ff99);"> <!-- Tạo navbar có chữ sáng nền tối, dính khi cuộn -->
+        <div class="container-fluid"> <!-- Trải full chiều ngang màn hình -->
+            <a class="navbar-brand" href="./Image/logo.png">Let's drink</a> <!-- Dẫn đến logo.png -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
+                <span class="navbar-toggler-icon"></span>
+            </button> <!-- Nút 3 gạch khi thu nhỏ -->
+            <div class="collapse navbar-collapse" id="navbarNav"> <!-- Phần các đường link -->
+                <ul class="navbar-nav ms-auto"> <!-- Danh sách các link, bên phải -->
+                    <!-- Mỗi link dẫn đến trang -->
+                    <li class="nav-item"><a class="nav-link" href="home.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="own.html">Giới thiệu</a></li>                   
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="combo.html">Khuyến mãi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Đặt nước</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Góp ý</a></li>
+                    <li class="nav-item" id="logout"><a class="nav-link">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Carousel -->
+    <div id="lvCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3000"> <!--Carousel tự chạy, 3s đổi, cách dưới 5-->
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active text-center"> <!-- Cho slide đầu tiên  -->
+                <img src="./Image/caro1.png" class="d-block mx-auto" style="width: 60%; height: 40%;" alt="Carousel 1">
+                <!-- Ảnh block giữa -->
+                <div class="mt-3">
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item text-center">
+                <img src="./Image/caro2.png" class="d-block mx-auto" style="width: 60%; height: 40%;" alt="Carousel 2">
+                <div class="mt-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>    
+    <!-- Menu nổi bật -->
+    <div class="container-fluid py-5"> <!-- cách trên dưới 5 -->
+        <div class="container mb-5">
+            <h2 class="text-center mb-4 title-menu">Món nổi bật</h2>
+            <div class="row g-4" id="drink-list"> <!-- Chia hàng, khoảng cách 4 -->
+            </div>
+            <div id="drink-detail" class="mt-5"></div>
+        </div>
+    </div>
+    <hr>
+    <!-- Combo / khuyến mãi nổi bật -->
+    <div class="container mb-5">
+        <h2 class="text-center mb-4 title-combo">Combo/Khuyến mãi nổi bật</h2>
+        <div class="row g-4">
+            <!-- Combo Thưởng thức -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="card" style="width: 300px;">
+                    <img src="./Image/tuan.png" class="card-img-top" style="height: 200px; object-fit: cover;" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Khuyến mãi cuối tuần</h5>
+                        <p class="card-text">Giảm 5%</p>
+                        <a href="khuyenmaiB.html" class="btn btn-primary w-100">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Khuyến mãi Bùng nổ -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="card" style="width: 300px;">
+                    <img src="./Image/no.png" class="card-img-top" style="height: 200px; object-fit: cover;" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Khuyến mãi Bùng nổ</h5>
+                        <p class="card-text">Giảm sốc 20%</p>
+                        <a href="khuyenmaiB.html" class="btn btn-primary w-100">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Form đặt bàn -->
+    <div class="container color">
+        <div class="row justify-content-center align-items-center" style="min-height:100vh;">
+            <div class="col-md-7">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4 title-booking">Đặt nước</h3>
+                        <form id="bookingForm">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Họ tên</label>
+                                <input type="text" class="form-control" id="fname" placeholder="Nhập họ tên">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Địa chỉ</label>
+                                <input type="text" class="form-control" id="where" placeholder="Địa chỉ">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Thời gian</label>
+                                <input type="datetime-local" class="form-control" id="time">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Số điện thoại</label>
+                                <input type="tel" class="form-control" id="tele" placeholder="Số điện thoại">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Ghi chú</label>
+                                <input type="text" class="form-control" id="content" placeholder="Ghi chú thêm (nếu có)">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Gửi 
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Form feedback -->
+    <div class="container color">
+        <div class="row justify-content-center align-items-center" style="min-height:100vh;">
+            <div class="col-md-7">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4 title-feedback">Góp ý</h3>
+                        <form> 
+                            <div class="mb-3">
+                                <label for="fname" class="form-label fw-bold"> Họ tên: </label> <br>
+                                <input type="text" class="form-control" placeholder="Họ tên" id="fname" required> 
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold"> Email: </label> <br>
+                                <input type="email" class="form-control" placeholder="Email" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="content" class="form-label fw-bold"> Nội dung: </label> <br>
+                                <input type="text" class="form-control" placeholder="Nội dung" id="content" required> 
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Đánh giá:</label><br>
+                                <input type="radio" name="star" style="width: 20px; height: 20px;"> ⭐
+                                <input type="radio" name="star" style="width: 20px; height: 20px;"> ⭐⭐
+                                <input type="radio" name="star" style="width: 20px; height: 20px;"> ⭐⭐⭐
+                                <input type="radio" name="star" style="width: 20px; height: 20px;"> ⭐⭐⭐⭐
+                                <input type="radio" name="star" style="width: 20px; height: 20px;"> ⭐⭐⭐⭐⭐
+                            </div>
+                            <!-- Làm modal -->
+                            <button class="btn btn-primary mt-3 w-100" type="button" data-bs-toggle="modal" data-bs-target="#myModal"> Gửi </button>
+                            <!-- Tạo phần hiển thị cho nút bấm -->
+                            <div class="modal fade" id="myModal" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <!-- Phần đầu -->
+                                        <div class="modal-header">
+                                            <h3 class="modal-title">Góp ý</h3>
+                                            <!-- Tạo nút "X" -->
+                                            <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Phần body -->
+                                        <div class="modal-body"> 
+                                            Bạn đã gửi được ý kiến và đánh giá của bạn
+                                        </div>
+                                        <!-- Nút "Đóng" -->
+                                        <div class="modal-footer">
+                                            <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Đóng</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Giới thiệu chủ quán -->
+    <div class="container-fluid py-5">
+        <h2 class="text-center mb-4 title-own">Tìm hiểu về người tạo ra trang web</h2>
+        <div class="text-center">
+            <a href="own.html" class="btn btn-primary">Vào đây</a>
+        </div>
+    </div>
+    <br><br>
+    <!-- Footer -->
+    <footer class="text-light text-center py-3" style="background-color: #003366;">
+        <p class="mb-1">© 2026 Let's drink. All rights reserved.</p>
+    </footer>
+
+    <script src="./booking.js"></script>
+    <script src="./js/db.js"></script>
+    <script src="./js/home.js"></script>
+    <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...args)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="v2Z13ueAslLe-hNsM6IUq";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+</html>
